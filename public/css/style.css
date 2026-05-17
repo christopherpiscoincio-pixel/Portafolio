@@ -1,0 +1,258 @@
+:root {
+    --bg: #09090b;
+    --card: #141417;
+    --border: #27272a;
+    --text: #fafafa;
+    --text-dim: #a1a1aa;
+    --accent-js: #10b981; /* Verde para la parte Web */
+    --accent-java: #3b82f6; /* Azul para Java */
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-container {
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Base Bento Card */
+.bento-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hero Profile */
+.profile-card {
+    background: linear-gradient(135deg, #111827 0%, #141417 60%);
+}
+
+.badge {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--accent-java);
+    padding: 6px 12px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 16px 0;
+    letter-spacing: -1px;
+}
+
+/* Fix definitivo al gradiente del nombre */
+.text-gradient {
+    background: linear-gradient(to right, var(--accent-java), var(--accent-js));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+}
+
+.subtitle {
+    color: var(--text-dim);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 0 24px 0;
+}
+
+.tech-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tech-tags span {
+    background: #1c1c21;
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Contenedor de Filtros */
+.filter-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-filter {
+    background: #141417;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: 0.2s;
+}
+
+.btn-filter:hover, .btn-filter.active {
+    background: #202024;
+    color: #fff;
+    border-color: #52525b;
+}
+
+/* Grid de Proyectos */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Animaciones e Iluminación en Hover */
+.jv-hover:hover {
+    border-color: var(--accent-java);
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.15);
+    transform: translateY(-4px);
+}
+
+.js-hover:hover {
+    border-color: var(--accent-js);
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.15);
+    transform: translateY(-4px);
+}
+
+.project-tag {
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.tag-java { color: var(--accent-java); }
+.tag-js { color: var(--accent-js); }
+
+h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.project-card p {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+}
+
+.project-techs {
+    margin-bottom: 24px;
+}
+
+.project-techs code {
+    background: #1c1c21;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    margin-right: 4px;
+    color: #e4e4e7;
+    border: 1px solid var(--border);
+}
+
+/* Botones de Proyectos */
+.project-links {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-project {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.btn-project.secondary {
+    background: #202024;
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.btn-project.secondary:hover {
+    background: #27272a;
+}
+
+.btn-java { background: var(--accent-java); color: #fff; }
+.btn-js { background: var(--accent-js); color: #fff; }
+
+.btn-project:hover {
+    filter: brightness(1.1);
+}
+
+/* Footer de Contacto */
+.contact-card {
+    text-align: center;
+    background: linear-gradient(to bottom, #141417, #0d0d0f);
+}
+
+.contact-card h2 {
+    margin: 0 0 10px 0;
+    font-weight: 800;
+}
+
+.contact-card p {
+    color: var(--text-dim);
+    margin: 0 0 25px 0;
+}
+
+.btn-contact {
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    padding: 16px 32px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 0.95rem;
+    transition: 0.2s;
+}
+
+.btn-contact:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+/* Clases de utilidad para el script de filtrado */
+.project-card.hide {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}

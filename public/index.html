@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christopher | Portafolio Desarrollador</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="portfolio-container">
+        
+        <!-- BLOQUE PERFIL -->
+        <header class="bento-card profile-card">
+            <div class="profile-info">
+                <span class="badge">DISPONIBLE PARA PROYECTOS</span>
+                <h1>Hola, soy <span class="text-gradient">Christopher</span></h1>
+                <p class="subtitle">Estudiante de desarrollo de software enfocado en la creación de aplicaciones web y sistemas de escritorio eficientes, priorizando la lógica limpia y la optimización de procesos.</p>
+                <div class="tech-tags">
+                    <span>Java</span>
+                    <span>JavaScript (ES6+)</span>
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- FILTRO DE PROYECTOS (NUEVO) -->
+        <div class="filter-container">
+            <button class="btn-filter active" data-filter="all">Todos</button>
+            <button class="btn-filter" data-filter="web">Web (JS)</button>
+            <button class="btn-filter" data-filter="desktop">Escritorio (Java)</button>
+        </div>
+
+        <!-- GRID DE PROYECTOS -->
+        <main class="projects-grid">
+            
+            <!-- Tarjeta 1: Sistema de Ventas en Java -->
+            <div class="bento-card project-card jv-hover" data-category="desktop">
+                <div class="project-content">
+                    <span class="project-tag tag-java">ESCRITORIO / POO</span>
+                    <h3>Sistema de Ventas e Inventario</h3>
+                    <p>Aplicación de escritorio para el control comercial, cálculo automatizado de precios, importes y gestión estructurada de operaciones.</p>
+                    <div class="project-techs"><code>Java</code> <code>POO</code> <code>Desktop App</code></div>
+                    <div class="project-links">
+                        <a href="https://github.com/christopherpiscoincio-pixel/Sistema-Inventario" target="_blank" class="btn-project secondary">GitHub</a>
+                        <a href="https://sistema-inventario-o64j.onrender.com"  class="btn-project primary btn-java">Ver Proyecto</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2: ProformaFlow -->
+            <div class="bento-card project-card js-hover" data-category="web">
+                <div class="project-content">
+                    <span class="project-tag tag-js">WEB / FINTECH</span>
+                    <h3>ProformaFlow</h3>
+                    <p>Generador web de cotizaciones comerciales con validación algorítmica de RUC (Módulo 11 SUNAT), alertas tipo Toast y exportación a PDF.</p>
+                    <div class="project-techs"><code>Vanilla JS</code> <code>Node.js</code> <code>jsPDF</code> <code>CSS3</code></div>
+                    <div class="project-links">
+                        <a href="https://github.com/christopherpiscoincio-pixel/Sistema-Proformas" target="_blank" class="btn-project secondary">GitHub</a>
+                        <a href="https://sistema-proformas.onrender.com" class="btn-project primary btn-js">Ver Demo</a>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- FOOTER / CONTACTO -->
+        <footer class="bento-card contact-card">
+            <h2>¿Tienes un proyecto o vacante en mente?</h2>
+            <p>Estoy listo para aportar soluciones técnicas y seguir potenciando mis habilidades en tu equipo.</p>
+            <a href="https://wa.link/kjxl4o" target="_blank" class="btn-contact">Hablemos por WhatsApp 📱</a>
+        </footer>
+
+    </div>
+
+    <!-- SCRIPT DE FILTRADO INTERACTIVO -->
+    <script src="js/main.js"></script>
+</body>
+</html>
